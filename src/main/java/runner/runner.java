@@ -12,7 +12,13 @@ import pages.BasePage;
 @CucumberOptions(
         features = "src/main/resources/features",
         glue = "steps",
-        tags = "@google"
+        tags = "@google",
+        /*
+          @since 0.2.0
+         * Se agrega la configuración para habilitar la salida de tipo JSON y XML
+        */
+        plugin = {"junit:target/cucumber/result.xml", "json:target/cucumber/APITest.json"}
+
 
 )
 
