@@ -200,9 +200,10 @@ public class BasePage {
         return region;
     }
 
-    public Region findTextInRegion(String path, String text) throws FindFailed {
+    public Region findWordInRegion(String path, String text) throws FindFailed {
        findImage(path);
-         region.setRect(region.findText(text)).highlight(1);
+       region.wait(region.findWord(text), 1000);
+       region.setRect(region.findWord(text)).highlight(1);
         return region;
     }
     public Region findImageInImage(String imagePath, String imagePathToFind) throws FindFailed {

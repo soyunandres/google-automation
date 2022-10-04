@@ -1,7 +1,11 @@
+# language: es
 @google
-Feature: Probar la búsqueda de google
-  Scenario: Buscar algo en google
-    Given Ingresamos a la página de google
-    When Esccribimos algo en la barra de busqueda
-    And Damos clic al boton de busqueda de google
-    Then Nos muestra los resultados de la búsqueda
+Necesidad del negocio: Probar la búsqueda de google
+  Regla de negocio
+
+  Escenario: Buscar algo en google
+    Dado Que ingresamos a la página de google
+    Cuando Esccribimos algo en la barra de búsqueda
+    Y Damos clic al botón de búsqueda de google
+    Entonces Nos muestra los resultados de la búsqueda
+

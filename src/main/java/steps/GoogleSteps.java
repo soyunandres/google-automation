@@ -1,27 +1,31 @@
 package steps;
 
 import io.cucumber.java.en.*;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
+import io.cucumber.java.es.Y;
 import pages.GooglePage;
 
 public class GoogleSteps {
     GooglePage google = new GooglePage();
-    @Given("^Ingresamos a la página de google$")
+    @Dado("^Que ingresamos a la página de google$")
     public void navigateToGoogle (){
         google.navigateToGoogle();
 
     }
-    @When("^Esccribimos algo en la barra de busqueda$")
+    @Cuando("^Esccribimos algo en la barra de búsqueda$")
     public void enterSearchCriteria (){
 
         google.enterSearchCriteria("Google");
     }
 
-    @And("^Damos clic al boton de busqueda de google$")
+    @Y("^Damos clic al botón de búsqueda de google$")
     public void clickSearchButton () throws InterruptedException {
         Thread.sleep(1000);
         google.clickGoogleSearch();
     }
-    @Then("^Nos muestra los resultados de la búsqueda$")
+    @Entonces("^Nos muestra los resultados de la búsqueda$")
     public void validateResults (){
     }
 
